@@ -1,4 +1,4 @@
-FROM trestletech/plumber
+FROM trestletech/plumber:latest
 
 # Install R packages
 RUN R -e "install.packages('jsonlite')"
