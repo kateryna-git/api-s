@@ -16,7 +16,7 @@ library(tidyverse)
 
 
 # model <- read_rds(here("10_shinydashboard/model-prophet-boost.rds"))
-raw_data <- read_csv('00_data/raw/sales_data_sample.csv') #read only the needed fields to make faster
+raw_data <- read_csv('sales_data_sample.csv') #read only the needed fields to make faster
 
 
 #* Plot a time series plot of the data
