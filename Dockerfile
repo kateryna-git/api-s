@@ -4,6 +4,6 @@ FROM trestletech/plumber:latest
 RUN R -e "install.packages('jsonlite')"
 
 COPY cars-model.rds /cars-model.rds
-COPY plumber-api.R /plumber.R
+COPY plumber.R /plumber.R
 
 CMD ["/main.R"]
