@@ -5,5 +5,6 @@ RUN R -e "install.packages('jsonlite')"
 
 COPY cars-model.rds /cars-model.rds
 COPY plumber.R /plumber.R
+COPY main.R /main.R
 
 CMD ["/main.R"]
