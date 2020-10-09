@@ -10,7 +10,7 @@ FROM trestletech/plumber:latest
  # libpq-dev -y
 
 # Install R packages
-#RUN R -e "install.packages('jsonlite')"
+RUN R -e "install.packages('jsonlite')"
 
 
 #RUN R -e "install.packages('devtools')"
