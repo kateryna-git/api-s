@@ -16,8 +16,15 @@ FROM trestletech/plumber:latest
 #RUN R -e "install.packages('devtools')"
 #RUN R -e 'devtools::install_github("fdrennan/plumberAPI")'
 
-COPY cars-model.rds /cars-model.rds
+
+#RUN R -e "install.packages('modeltime')
+#RUN R -e "install.packages('timetk')   
+RUN R -e "install.packages('lubridate')
+RUN R -e "install.packages('tidyverse')
+
+#COPY cars-model.rds /cars-model.rds
 COPY plumber.R /plumber.R
-COPY main.R /main.R
+#COPY main.R /main.R
+COPY sales_data_sample.csv /sales_data_sample.csv
 
 CMD ["/plumber.R"]
