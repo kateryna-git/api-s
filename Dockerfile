@@ -1,13 +1,13 @@
 FROM trestletech/plumber:latest
 
 
-RUN apt-get update --allow-releaseinfo-change -qq && apt-get install -y \
-  git-core \
-  libssl-dev \
-  default-jdk \
-  libcurl4-openssl-dev \
-  libxml2-dev \
-  libpq-dev -y
+#RUN apt-get update --allow-releaseinfo-change -qq && apt-get install -y \
+#  git-core \
+#  libssl-dev \
+#  default-jdk \
+#  libcurl4-openssl-dev \
+#  libxml2-dev \
+ # libpq-dev -y
 
 # Install R packages
 RUN R -e "install.packages('devtools')"
