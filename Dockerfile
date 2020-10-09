@@ -10,7 +10,7 @@ FROM trestletech/plumber:latest
  # libpq-dev -y
 
 # Install R packages
-RUN R -e "install.packages('jsonlite')"
+#RUN R -e "install.packages('jsonlite')"
 
 
 #RUN R -e "install.packages('devtools')"
@@ -20,4 +20,4 @@ COPY cars-model.rds /cars-model.rds
 COPY plumber.R /plumber.R
 COPY main.R /main.R
 
-CMD ["/main.R"]
+CMD ["/plumber.R"]
