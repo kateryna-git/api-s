@@ -1,9 +1,6 @@
 # plumber.R
 
-#* @get /
-function() {
-  Sys.Date()
-}
+
 
 
 #* @apiTitle Plumber Sales Analysis API
@@ -15,8 +12,16 @@ library(tidyverse)
 
 
 
+
 # model <- read_rds(here("10_shinydashboard/model-prophet-boost.rds"))
 raw_data <- read_csv('sales_data_sample.csv') #read only the needed fields to make faster
+
+
+#* @get /
+function() {
+  Sys.Date()
+}
+
 
 
 #* Plot a time series plot of the data
