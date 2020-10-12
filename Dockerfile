@@ -22,6 +22,6 @@ RUN R -e "install.packages('jsonlite')"
 COPY sales_data_sample.csv /sales_data_sample.csv
 COPY plumber.R /plumber.R
 
-
+CMD ["/plumber.R"]
 #ENTRYPOINT ["R", "-e", "pr <- plumber::plumb(commandArgs()[4]); pr$run(host='0.0.0.0', port=8000)"]
 
