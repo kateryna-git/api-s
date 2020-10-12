@@ -10,7 +10,7 @@ FROM rstudio/plumber
  # libpq-dev -y
 
 # Install R packages
-RUN R -e "install.packages('jsonlite')"
+#RUN R -e "install.packages('jsonlite')"
 #RUN R -e "install.packages('plumber')"
 
 
