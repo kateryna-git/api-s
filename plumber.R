@@ -53,3 +53,12 @@ preprocess_data <-function(forecast_period = "6 months", time_unit = "day", left
   
   return(df)
 }
+
+
+#* Plot a histogram
+#* @serializer png
+#* @get /plot-test
+function() {
+  rand <- rnorm(100)
+  hist(rand)
+}
