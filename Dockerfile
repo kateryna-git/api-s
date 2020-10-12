@@ -2,11 +2,8 @@ FROM rstudio/plumber
 
 
 ## Install R Packages
-RUN install2.r --error --deps TRUE \
-    jsonlite \
-    tidyverse \
-    plotly \
-    lubridate
+RUN R -e "install.packages('tidyverse')"
+RUN R -e "install.packages('lubridate')"
 
 COPY cars-model.rds /cars-model.rds
 COPY plumber.R /plumber.R
