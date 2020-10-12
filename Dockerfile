@@ -7,6 +7,6 @@ RUN R -e "install.packages('jsonlite')"
 
 COPY cars-model.rds /cars-model.rds
 COPY plumber.R /plumber.R
-COPY sales_data_sample.csv/sales_data_sample.csv
+COPY sales_data_sample.csv /sales_data_sample.csv
 
 CMD ["/plumber.R"]
