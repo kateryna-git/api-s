@@ -10,15 +10,17 @@ FROM rstudio/plumber
  # libpq-dev -y
 
 # Install R packages
-#RUN R -e "install.packages('jsonlite')"
-#RUN R -e "install.packages('plumber')"
-
+RUN R -e "install.packages('lubridate')"
+RUN R -e "install.packages('tidyverse')"
+RUN R -e "install.packages('modeltime')"
+RUN R -e "install.packages('timetk')"
 
 #RUN R -e "install.packages('devtools')"
 #RUN R -e 'devtools::install_github("fdrennan/plumberAPI")'
 
-COPY cars-model.rds /cars-model.rds
+COPY sales_data_sample.csv /sales_data_sample.csv
 COPY plumber.R /plumber.R
-COPY main.R /main.R
 
+
+#ENTRYPOINT ["R", "-e", "pr <- plumber::plumb(commandArgs()[4]); pr$run(host='0.0.0.0', port=8000)"]
 CMD ["/plumber.R"]
