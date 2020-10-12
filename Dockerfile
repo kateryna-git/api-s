@@ -1,4 +1,4 @@
-FROM trestletech/plumber:latest
+FROM rocker/r-ver:4.0.2
 
 
 #RUN apt-get update --allow-releaseinfo-change -qq && apt-get install -y \
@@ -10,7 +10,8 @@ FROM trestletech/plumber:latest
  # libpq-dev -y
 
 # Install R packages
-#RUN R -e "install.packages('jsonlite')"
+RUN R -e "install.packages('jsonlite')"
+RUN R -e "install.packages('plumber')"
 
 
 #RUN R -e "install.packages('devtools')"
