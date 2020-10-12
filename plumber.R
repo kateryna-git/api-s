@@ -22,3 +22,4 @@ function(){
 #* @get /plotwt
 function(){
   hist(mtcars$wt)
+  {
