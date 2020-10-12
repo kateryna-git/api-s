@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.0.2
+FROM rstudio/plumber
 
 
 #RUN apt-get update --allow-releaseinfo-change -qq && apt-get install -y \
@@ -11,7 +11,7 @@ FROM rocker/r-ver:4.0.2
 
 # Install R packages
 RUN R -e "install.packages('jsonlite')"
-RUN R -e "install.packages('plumber')"
+#RUN R -e "install.packages('plumber')"
 
 
 #RUN R -e "install.packages('devtools')"
