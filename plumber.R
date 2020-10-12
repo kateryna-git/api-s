@@ -6,6 +6,7 @@ library(modeltime)
 library(timetk)   
 library(lubridate)
 library(tidyverse)
+library(jsonlite)
 
 
 
@@ -33,6 +34,7 @@ function(){
 #* @param time_unit Unit to aggregate by (month, day, week, year)
 #* @param left date range lower margin
 #* @param right date range upper margin 
+#* @serializer json
 #* @post /raw_data
 
 
