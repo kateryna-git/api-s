@@ -51,7 +51,7 @@ function(hp, wt){
 
 preprocess_data <-function(forecast_period = "6 months", time_unit = "day", left = "2003-01-06", right = "2005-05-31") {
   
-  df <- raw_data %>%    
+raw_data %>%    
     select(SALES, ORDERDATE) %>% 
     mutate(date = mdy_hm(ORDERDATE) %>% as_datetime()) %>% 
     filter(date %>% between(as_datetime(left),
@@ -62,5 +62,4 @@ preprocess_data <-function(forecast_period = "6 months", time_unit = "day", left
     summarise(value = sum(SALES)) %>%
     ungroup()
   
-  return(df)
 }
