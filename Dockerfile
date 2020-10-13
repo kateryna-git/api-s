@@ -1,5 +1,7 @@
 FROM rstudio/plumber
 
+RUN apt-get install -y --no-install-recommends libxt6
+
 ## Install R Packages
 RUN R -e "install.packages('tidyverse')"
 RUN R -e "install.packages('lubridate')"
